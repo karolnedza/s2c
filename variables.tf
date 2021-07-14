@@ -19,10 +19,6 @@ variable "pre_shared_key" {}
 variable "enable_ikev2" {}
 
 
-# locals {
-#   algorithm = alltrue([var.phase_1_authentication == "SHA-256",
-#       var.phase_2_authentication == "HMAC-SHA-256"])
-# }
 locals {
   algorithm = alltrue([var.phase_1_authentication == "SHA-256",
       var.phase_2_authentication == "HMAC-SHA-256",
