@@ -8,7 +8,7 @@ resource "aviatrix_site2cloud" "site2cloud" {
     remote_gateway_ip = var.remote_gateway_ip
     ha_enabled = false
     private_route_encryption = false
-    remote_subnet_cidr = var.remote_subnet_cidr
+    remote_subnet_cidr = "${var.remote_subnet_cidr/32}
     local_subnet_cidr = var.local_subnet_cidr
     custom_algorithms = true
     phase_1_authentication = var.phase_1_authentication
