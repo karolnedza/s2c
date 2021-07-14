@@ -20,5 +20,5 @@ variable "enable_ikev2" {}
 
 
 locals {
-  algorithm = alltrue([var.phase_1_authentication == "SHA256"])
+  algorithm = alltrue([var.phase_1_authentication == "SHA256", var.phase_2_authentication == "SHA256"])
 }
