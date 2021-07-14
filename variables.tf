@@ -17,3 +17,8 @@ variable "phase_1_encryption" {}
 variable "phase_2_encryption" {}
 variable "pre_shared_key" {}
 variable "enable_ikev2" {}
+
+
+locals {
+  algorithm = alltrue([var.phase_1_authentication == "SHA256"])
+}
