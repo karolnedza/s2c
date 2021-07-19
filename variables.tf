@@ -17,7 +17,7 @@ variable "pre_shared_key" {}
 variable "enable_ikev2" {}
 
 variable "region" {}
-
+variable "vcs_repository" {}
 
 variable "vpc_id" {
   type        = map(string)
