@@ -16,6 +16,8 @@ variable "phase_2_encryption" {}
 variable "pre_shared_key" {}
 variable "enable_ikev2" {}
 
+variable "region" {}
+
 
 variable "vpc_id" {
   type        = map(string)
