@@ -26,3 +26,18 @@ resource "aviatrix_site2cloud" "site2cloud" {
     custom_mapped = false
     enable_event_triggered_ha = null
 }
+
+
+resource "aviatrix_gateway_dnat" "gateway_dnat_1" {
+    gw_name = var.primary_cloud_gateway_name[var.region]
+    dnat_policy {
+        src_cidr = "${var.remote_subnet_cidr}/32"
+        dst_cidr = var.local_subnet_cidr
+        protocol = "all"
+        interface = "eth0"
+        connection = aviatrix_site2cloud.site2cloud.connection_name
+        dnat_ips = "10.127.1.2"
+    }
+
+    sync_to_ha = true
+}
