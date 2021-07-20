@@ -35,7 +35,7 @@ resource "aviatrix_gateway_dnat" "gateway_dnat_1" {
         dst_cidr = var.local_subnet_cidr
         protocol = "all"
         interface = "eth0"
-        connection = aviatrix_site2cloud.site2cloud.connection_name
+        connection = "${aviatrix_site2cloud.site2cloud.connection_name}@site2cloud"
         dnat_ips = "10.127.1.2"
     }
 
