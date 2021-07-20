@@ -1,6 +1,6 @@
 resource "aviatrix_site2cloud" "site2cloud" {
     vpc_id = var.vpc_id[var.region]
-    connection_name = "cloud-to-site-ike-1"
+    connection_name = var.connection_name
     connection_type = "unmapped"
     remote_gateway_type = "generic"
     tunnel_type = "policy"

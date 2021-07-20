@@ -18,6 +18,8 @@ variable "enable_ikev2" {}
 
 variable "region" {}
 variable "vcs_repository" {}
+variable "connection_name" {}
+
 
 variable "vpc_id" {
   type        = map(string)
