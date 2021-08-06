@@ -40,4 +40,6 @@ resource "aviatrix_gateway_dnat" "gateway_dnat_1" {
     }
 
     sync_to_ha = true
+
+    depends_on = [aviatrix_site2cloud.site2cloud]
 }
