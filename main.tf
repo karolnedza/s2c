@@ -32,7 +32,7 @@ resource "aviatrix_gateway_dnat" "gateway_dnat_1" {
     gw_name = var.primary_cloud_gateway_name[var.region]
     dnat_policy {
         src_cidr = "${var.remote_subnet_cidr}/32"
-        dst_cidr = var.local_subnet_cidr
+        dst_cidr = var.local_subnet_cidr[var.region]
         protocol = "all"
         interface = "eth0"
         connection = "${aviatrix_site2cloud.site2cloud.connection_name}@site2cloud"
