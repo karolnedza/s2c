@@ -32,9 +32,9 @@ variable "vpc_id" {
 variable "primary_cloud_gateway_name" {
   type        = map(string)
   default     = {
-    "emea"     = "emea-gw",
-    "apj" =   "apj-gw",
-    "america" = "us-gw"
+    "emea"     = "gw-emea",
+    "apj" =   "gw-apac",
+    "america" = "gw-us"
   }
 }
 
