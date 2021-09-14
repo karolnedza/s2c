@@ -41,9 +41,9 @@ variable "primary_cloud_gateway_name" {
 variable "local_subnet_cidr" {
   type        = map(string)
   default     = {
-    "emea"     = "1.1.1.1/30",
-    "apj" =   "2.2.2.2/30",
-    "america" = "3.3.3.3/30"
+    "emea"     = "1.1.1.1/32",
+    "apj" =   "2.2.2.2/32",
+    "america" = "3.3.3.3/32"
   }
 }
 
