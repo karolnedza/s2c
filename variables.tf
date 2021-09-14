@@ -17,7 +17,6 @@ variable "pre_shared_key" {}
 variable "enable_ikev2" {}
 
 variable "region" {}
-variable "vcs_repository" {}
 variable "connection_name" {}
 
 
