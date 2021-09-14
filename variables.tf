@@ -24,9 +24,9 @@ variable "connection_name" {}
 variable "vpc_id" {
   type        = map(string)
   default     = {
-    "emea"     = "vpc-00420a49842569c95",
-    "apj" =   "vpc-0985135963983ff02",
-    "america" = "vpc-035a36f67f60a1be1"
+    "emea"     = "vpc-00dc922595dec2df8",
+    "apj" =   "vpc-07780687ec06cafe5",
+    "america" = "vpc-059dd5ff536e26085"
   }
 }
 
