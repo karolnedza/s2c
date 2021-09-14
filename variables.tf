@@ -6,7 +6,6 @@ variable "ctrl_password" {}
 
 variable "remote_gateway_ip" {}
 variable "remote_subnet_cidr" {}
-variable "local_subnet_cidr" {}
 variable "phase_1_authentication" {}
 variable "phase_2_authentication" {}
 variable "phase_1_dh_groups" {}
@@ -38,6 +37,15 @@ variable "primary_cloud_gateway_name" {
   }
 }
 
+
+variable "local_subnet_cidr" {
+  type        = map(string)
+  default     = {
+    "emea"     = "1.1.1.1/30",
+    "apj" =   "2.2.2.2/30",
+    "america" = "3.3.3.3/30"
+  }
+}
 
 locals {
   algorithm = alltrue([var.phase_1_authentication == "SHA-256",
