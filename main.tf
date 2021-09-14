@@ -9,7 +9,7 @@ resource "aviatrix_site2cloud" "site2cloud" {
     ha_enabled = false
     private_route_encryption = false
     remote_subnet_cidr = "${var.remote_subnet_cidr}/32"
-    local_subnet_cidr = var.local_subnet_cidr
+    local_subnet_cidr = var.local_subnet_cidr[var.region]
     custom_algorithms = local.algorithm ? false : true
     phase_1_authentication = local.algorithm ? null : var.phase_1_authentication
     phase_2_authentication = local.algorithm ? null : var.phase_2_authentication
