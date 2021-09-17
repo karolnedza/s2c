@@ -33,7 +33,7 @@ variable "primary_cloud_gateway_name" {
   default     = {
     "emea"     = "gw-emea",
     "apj" =   "gw-apac",
-    "america" = "gw-us"
+    "america" = "us-emea"  # need to correct it
   }
 }
 
