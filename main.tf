@@ -27,6 +27,7 @@ resource "aviatrix_site2cloud" "site2cloud" {
     enable_event_triggered_ha = null
 }
 
+###### DNAT 
 
 resource "aviatrix_gateway_dnat" "gateway_dnat_1" {
     gw_name = var.primary_cloud_gateway_name[var.region]
